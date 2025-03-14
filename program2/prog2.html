@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Read a string from the user
+      let str = prompt("Enter a string:");
+
+      // Find its length
+      console.log("Length of the string:", str.length);
+
+      // Extract the word "JavaScript" using substring or slice
+      let extractedWord = str.substring(
+        str.indexOf("JavaScript"),
+        str.indexOf("JavaScript") + 10
+      );
+      console.log("Extracted word:", extractedWord);
+
+      // Replace one word with another
+      let newStr = str.replace("JavaScript", "JS");
+      console.log("New string after replacement:", newStr);
+
+      // Function to check if a string is a palindrome
+      function isPalindrome(str) {
+        let reversedStr = str.split("").reverse().join("");
+        return str === reversedStr;
+      }
+
+      // Check if the given string is a palindrome
+      console.log("Is palindrome:", isPalindrome(str));
+    </script>
+  </body>
+</html>
