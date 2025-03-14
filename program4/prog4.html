@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+    <style>
+      img {
+        width: 300px;
+        height: 200px;
+        border: 5px solid black;
+        transition: border 0.3s ease;
+      }
+      button {
+        padding: 5px 10px;
+        background: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Button-->
+    <button id="myButton">Click Me</button>
+    <!--Image-->
+    <img id="myImage" src="image.png" alt="sample image" />
+    <script>
+      const button = document.getElementById("myButton");
+      button.addEventListener("click", () => {
+        window.alert("button clicked!");
+      });
+      const image = document.getElementById("myImage");
+      image.addEventListener("mouseover", () => {
+        image.style.border = "5px solid blue";
+      });
+      image.addEventListener("mouseout", () => {
+        image.style.border = "none";
+      });
+      document.addEventListener("keydown", (event) => {
+        window.alert("Key pressed: " + event.key);
+      });
+    </script>
+  </body>
+</html>
